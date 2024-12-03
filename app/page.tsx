@@ -1,8 +1,19 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+// type Test = {
+//   /**
+//    * 名前
+//    */
+//   name: string;
+// };
+
 export default function Home() {
   const name = "世界";
+  // const test: Test = {
+  //   name: "7",
+  // };
+  // console.log(test);
   return (
     <section className={styles.top}>
       <div>
