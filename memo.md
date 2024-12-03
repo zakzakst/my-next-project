@@ -13,4 +13,7 @@ git commit -m <message>
 
 // 状態を確認
 git status
+
+// 調べる
+git push -u origin <gitのHTTPS>
 ```
