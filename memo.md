@@ -16,4 +16,5 @@ git status
 
 // 調べる
 git push -u origin <gitのHTTPS>
+git push -u origin HEAD
 ```
