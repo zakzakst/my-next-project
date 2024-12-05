@@ -62,20 +62,30 @@ export default function Home() {
   console.log(data);
 
   return (
-    <section className={styles.top}>
-      <div>
-        <h1 className={styles.title}>テクノロジーの力で{name}を変える</h1>
-        <p className={styles.description}>
-          私たちは市場をリードしているグローバルテックカンパニーです。
-        </p>
-      </div>
-      <Image
-        className={styles.bgimg}
-        src="/img-mv.jpg"
-        alt=""
-        width={4000}
-        height={1200}
-      />
-    </section>
+    <>
+      <section className={styles.top}>
+        <div>
+          <h1 className={styles.title}>テクノロジーの力で{name}を変える</h1>
+          <p className={styles.description}>
+            私たちは市場をリードしているグローバルテックカンパニーです。
+          </p>
+        </div>
+        <Image
+          className={styles.bgimg}
+          src="/img-mv.jpg"
+          alt=""
+          width={4000}
+          height={1200}
+        />
+      </section>
+      <section className={styles.news}>
+        <h2 className={styles.newsTitle}>News</h2>
+        <ul>
+          {data.contents.map((article) => (
+            <li key={article.id}>{article.title}</li>
+          ))}
+        </ul>
+      </section>
+    </>
   );
 }
