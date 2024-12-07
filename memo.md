@@ -14,7 +14,15 @@ git commit -m <message>
 // 状態を確認
 git status
 
-// 調べる
-git push -u origin <gitのHTTPS>
-git push -u origin HEAD
+// リモートのURLを設定
+git remote add origin <gitのHTTPS>
+
+// リモートの確認
+git remote -v
+
+// 追跡関係を設定してpush
+git push -u origin HEAD （次回以降はgit pushのみでよくなる）
+
+// 追跡関係の確認
+git branch -vv
 ```
