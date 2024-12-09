@@ -1,12 +1,13 @@
 import styles from "./index.module.css"
+import Link from "next/link"
 
-type Link = {
+type LinkData = {
   id: string
   path: string
   text: string
 }
 
-const links: Link[] = [
+const links: LinkData[] = [
   {
     id: 'news',
     path: '/news',
@@ -31,7 +32,7 @@ export default function Footer() {
         <ul className={styles.items}>
           {links.map((link) => (
             <li key={link.id} className={styles.item}>
-              <a href={link.path}>{link.text}</a>
+              <Link href={link.path}>{link.text}</Link>
             </li>
           ))}
         </ul>
