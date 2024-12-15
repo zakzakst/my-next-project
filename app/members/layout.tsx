@@ -1,9 +1,9 @@
-import Sheet from "../_components/Sheet"
-import Hero from "../_components/Hero"
+import Sheet from "../_components/Sheet";
+import Hero from "../_components/Hero";
 
 type Props = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 export default function RootLayout({ children }: Props) {
   return (
@@ -11,5 +11,5 @@ export default function RootLayout({ children }: Props) {
       <Hero title="Members" sub="メンバー" />
       <Sheet>{children}</Sheet>
     </>
-  )
+  );
 }
