@@ -1,29 +1,29 @@
-import styles from "./index.module.css"
-import Link from "next/link"
+import styles from "./index.module.css";
+import Link from "next/link";
 
 type LinkData = {
-  id: string
-  path: string
-  text: string
-}
+  id: string;
+  path: string;
+  text: string;
+};
 
 const links: LinkData[] = [
   {
-    id: 'news',
-    path: '/news',
-    text: 'ニュース',
+    id: "news",
+    path: "/news",
+    text: "ニュース",
   },
   {
-    id: 'members',
-    path: '/members',
-    text: 'メンバー',
+    id: "members",
+    path: "/members",
+    text: "メンバー",
   },
   {
-    id: 'contact',
-    path: '/contact',
-    text: 'お問い合わせ',
+    id: "contact",
+    path: "/contact",
+    text: "お問い合わせ",
   },
-]
+];
 
 export default function Footer() {
   return (
@@ -39,5 +39,5 @@ export default function Footer() {
       </nav>
       <p className={styles.cr}>&copy; SIMPLE. All Rights Reserved 2024</p>
     </footer>
-  )
+  );
 }
