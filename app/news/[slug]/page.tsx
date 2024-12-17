@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getNewsDetail } from "@/app/_libs/microcms";
 import Article from "@/app/_components/Article";
@@ -12,6 +13,27 @@ type Props = {
     dk?: string;
   };
 };
+
+export async function generateMetadata({
+  params,
+  searchParams,
+}: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const { dk } = await searchParams;
+  const data = await getNewsDetail(slug, {
+    draftKey: dk,
+  });
+
+  return {
+    title: data.title,
+    description: data.description,
+    openGraph: {
+      title: data.title,
+      description: data.description,
+      images: [data?.thumbnail?.url ?? ""],
+    },
+  };
+}
 
 export default async function Page({ params, searchParams }: Props) {
   // 下記を参考に書籍の内容を修正
